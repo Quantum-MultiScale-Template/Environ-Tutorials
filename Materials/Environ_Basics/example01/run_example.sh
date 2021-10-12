@@ -25,7 +25,7 @@ $ECHO "               J. Chem. Phys. 144, 014103 (2016)"
 # set the needed environment variables
 BIN_DIR=/usr/local/bin
 PSEUDO_DIR=/home/qms-user/Software/quantum-espresso+Environ/pseudo
-TMP_DIR=./tmpdir
+TMP_DIR=./results/tmpdir
 PARA_PREFIX=" "
 PARA_POSTFIX=" -nk 1 -nd 1 -nb 1 -nt 1 "
 
@@ -148,14 +148,11 @@ pbc_dim=0                  # select the desired system dimensionality
                            #   the 1D direction or normal to the 2D plane
                            #   (pbc_axis = 1, 2 or 3 for x, y or z axis)
 ### SOLVER PARAMETERS #######################################################
-solver='fixed-point'       # type of solver (cg is default with dielectric)
+solver='cg'                # type of solver (cg is default with dielectric)
                            # direct: direct poisson solver (only for vacuum)
                            # cg: conjugate gradient with sqrt preconditioner
                            # sd: steepest descent with sqrt preconditioner
                            # fixed-point: iterative approach
-auxiliary='full'           # auxiliary charge in the solver
-                           # none: no charge, solve for the potential
-                           # full: solve for the polarization charge
 tol='1.d-11'               # tolerance of the solver
 mix='0.6'                  # mixing for the solver
 ############################################################################
