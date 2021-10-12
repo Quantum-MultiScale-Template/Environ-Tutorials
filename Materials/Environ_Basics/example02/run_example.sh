@@ -21,7 +21,7 @@ $ECHO
 # set the needed environment variables
 BIN_DIR=/usr/local/bin
 PSEUDO_DIR=/home/qms-user/Software/quantum-espresso+Environ/pseudo
-TMP_DIR=./
+TMP_DIR=`pwd`/tmpdir
 PARA_PREFIX=" "
 PARA_POSTFIX=" -nk 1 -nd 1 -nb 1 -nt 1 "
 

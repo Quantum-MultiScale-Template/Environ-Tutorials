@@ -33,7 +33,39 @@ $ECHO "                   J. Chem. Phys. 150, 041722 (2019)."
 $ECHO
 
 # set the needed environment variables
-. ../../../environment_variables
+BIN_DIR=/usr/local/bin
+PSEUDO_DIR=/home/qms-user/Software/quantum-espresso+Environ/pseudo
+TMP_DIR=`pwd`/tmpdir
+PARA_PREFIX=" "
+PARA_POSTFIX=" -nk 1 -nd 1 -nb 1 -nt 1 "
+
+export OMP_NUM_THREADS=1
+NETWORK_PSEUDO=http://www.quantum-espresso.org/wp-content/uploads/upf_files/
+
+# wget or curl needed if some PP has to be downloaded from web site
+# script wizard will surely find a better way to find what is available
+if test "`which curl`" = "" ; then
+   if test "`which wget`" = "" ; then
+      echo "wget or curl not found: will not be able to download missing PP"
+   else
+      WGET="wget -O"
+      # echo "wget found"
+   fi
+else
+   WGET="curl -o"
+   # echo "curl found"
+fi
+
+# function to test the exit status of a job
+check_failure () {
+    # usage: check_failure $?
+    if test $1 != 0
+    then
+        echo "Error condition encountered during test: exit status = $1"
+        echo "Aborting"
+        exit 1
+    fi
+}
 
 # compatibility with QE for versions prior to 6.4
 if [ -z $NETWORK_PSEUDO ]; then
