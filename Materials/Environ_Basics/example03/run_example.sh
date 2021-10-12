@@ -132,7 +132,7 @@ environ_type='input'  # type of environment
                       # water: parameters from experimental values
                       #        and specifically tuned
 ### PERIODIC BOUNDARY CONDITIONS ####################################
-correction='none'      # correction scheme to remove pbc 
+correction='pcc'       # correction scheme to remove pbc 
                        # none: periodic calculation, no correction
                        # martyna-tuckerman: on-the-fly correction of
                        #   the potential in G-space, fast and no error
@@ -144,7 +144,7 @@ correction='none'      # correction scheme to remove pbc
                        #   input (pbc_correction)
 #####################################################################
 
-for correction in none martyna-tuckerman pcc ; do 
+for correction in martyna-tuckerman pcc ; do 
 
 for environment in vacuum water ; do 
 
