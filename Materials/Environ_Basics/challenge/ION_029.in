@@ -1,6 +1,6 @@
 &CONTROL
    calculation = 'relax'
-   pseudo_dir = ./pseudos
+   pseudo_dir = './pseudos'
    tprnfor = .TRUE.
    forc_conv_thr = 0.0005
    restart_mode = 'from_scratch'
