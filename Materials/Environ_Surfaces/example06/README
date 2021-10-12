@@ -1,0 +1,57 @@
+This example shows how to use pw.x to model a charged slab in the presence of 
+an electrolyte solution. In particular, the electrochemical diffuse layer is 
+modeled as a classical charge distribution, as obtained from the solution of 
+the Poisson-Boltzmann (PB) equation. 
+
+The calculation is a single SCF calculation of a Ag(100) slab. The solvent
+is treated as a continuum dielectric according to the Self-consistent
+Continuum Solvation (SCCS) model of O. Andreussi, I. Dabo and N. Marzari,
+J. Chem. Phys. 136, 064102 (2012). The keyword solvent_mode='full'
+is recommended: quickly vanishing gaussian densities are added in correspondence
+of the atomic positions to avoid holes that might originate from the missing
+core electrons (the problem typically occurs for halogens and transition metal
+atoms).
+
+The example compares different electrolyte models and implementations, as
+described in F. Nattino, M. Truscott, N. Marzari, O. Andreussi, J. Chem. Phys. 
+150, 041722 (2019). The following models are considered here:
+- the linearized PB model, suitable for low surface charges and large 
+  ionic strengths;
+- the standard PB model (full non-linear model);
+- the size-modified PB model, accounting for ionic finite-size effects 
+  (see I. Borukhov, D. Andelman, and H. Orland, Phys. Rev. Lett. 79, 435 
+  (1997) and S. Ringe, H. Oberhofer, C. Hille, S. Matera, and K. Reuter, 
+  J. Comput. Theor. Chem. 12, 4052 (2016)).
+
+Note that a solvent-accessible but electrolyte-free region (Stern layer) is 
+introduced in the proximity of the surface through an ion-exclusion 
+function as described by I. Dabo, E. Cancès, Y.L. Li, and N. Marzari, arXiv 
+0901.0096 (2008). A planar error-function-shaped 2D function is employed 
+to define the electrolyte cavity.
+
+Only open boundary conditions are allowed for the calculations including the
+electrolyte. The real-space quadratic correction of the electrostatic
+potential (pbc_correcton='parabolic', see I. Dabo et al. Phys. Rev. B 77, 
+115139 (2008)) is required. The method has been coupled to the SCCS model 
+in order to remove PBC in simulations of partially periodic systems in the 
+presence of a continuum solvent, as described by O. Andreussi and N. Marzari 
+Phys. Rev. B 90 245101 (2014).
+
+The (linearized) (M)PB equation can be solved numerically for any cavity 
+shape and for arbitrary system dimensionality. For 2D-systems, however, 
+a second implementation is available for the (linearized) PB model. 
+In particular, the electrolyte model is solved analytically along 
+the surface normal and used to impose the boundary conditions of the 
+electrostatic problem. This analytic approach is activated by setting 
+Gouy-Chapman-Stern boundary conditions (pbc_correction='gcs'), which  
+include the quadratic PBC correction along the specified surface normal axis. 
+Note that in this approach the system charge density and the dielectric 
+interface need to be fully contained within the electrolyte onset.
+
+From ENVIRON version 1.0 the Fermi energy shift that arises from the gaussian
+nuclei smearing together with the parabolic pbc correction is printed as a
+separate contribution that needs to be added to the standard Fermi energy
+from pw.x.
+
+A rough explanation of the different electrolyte-related keywords is provided 
+in the run_example.sh file.

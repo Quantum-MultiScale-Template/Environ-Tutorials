@@ -1,0 +1,6 @@
+  Solver               = cg 
+  Solvation Energy     = -6.3736952880 Kcal/mol
+  Cavitation Energy    =  4.2939372888 Kcal/mol
+  PV Energy            = -2.1885673176 Kcal/mol
+  Electrostatic Energy = -8.4790652592 Kcal/mol
+

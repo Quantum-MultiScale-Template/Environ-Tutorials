@@ -1,0 +1,11 @@
+
+Same as example01, but the cavity that separates the quantum mechanical from the 
+continuum region is constructed using interlocking spheres centered on the nuclei
+("soft-spheres") as described in G. Fisicaro, L. Genovese, O. Andreussi, S. Mandal,
+N.N. Nair, N. Marzari, and S.Goedecker, J. Chem. Theor. Comput. 13, 3829 (2017).
+
+Mind that the parabolic correction (or point-countercharge method)
+is used for both the calculation in vacuum and in the solvent.
+
+A rough explanation of the keywords that are related to the soft-spheres 
+solvation model is provided in the run_example.sh file.

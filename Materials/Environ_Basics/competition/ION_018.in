@@ -1,0 +1,44 @@
+&CONTROL
+   calculation = 'relax'
+   pseudo_dir = ./pseudos
+   tprnfor = .TRUE.
+   forc_conv_thr = 0.0005
+   restart_mode = 'from_scratch'
+   nstep = 100
+   outdir = './'
+/
+&SYSTEM
+   ibrav = 1
+   ecutrho = 480
+   ecutwfc = 60
+   smearing = "mv"
+   degauss = 0.01
+   nat = 8
+   ntyp = 3
+   tot_charge = 1
+   celldm(1) = 23.5412582893
+/
+&ELECTRONS
+   electron_maxstep = 200
+   conv_thr = 5.d-9
+/
+&IONS
+   ion_dynamics = 'bfgs'
+/
+&CELL
+/
+K_POINTS (automatic)
+1 1 1 0 0 0
+ATOMIC_SPECIES
+H   1.008  H.pbe-rrkjus_psl.1.0.0.UPF
+C  12.010  C.pbe-n-kjpaw_psl.1.0.0.UPF
+N  14.006  N.pbe-n-radius_5.UPF
+ATOMIC_POSITIONS (bohr)
+C 10.72895950 10.80805922 11.79203605
+H 12.09775232 14.49233745 11.39392851
+H 13.72655870 12.77521068 13.45049268
+H 14.09826507 12.30459166 10.37292931
+H 11.54418402 8.95107916 12.17454534
+H 9.78694788 10.80359128 9.95570612
+H 9.38580437 11.31145260 13.27590933
+N 12.79656318 12.71871108 11.74948582

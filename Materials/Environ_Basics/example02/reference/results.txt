@@ -1,0 +1,4 @@
+  Solvation Energy     = -5.7862228368 Kcal/mol
+  Cavitation Energy    =  4.2114770904 Kcal/mol
+  PV Energy            = -2.0996233536 Kcal/mol
+  Electrostatic Energy = -7.8980765736 Kcal/mol

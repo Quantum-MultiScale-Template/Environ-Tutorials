@@ -1,0 +1,57 @@
+ &CONTROL
+   !
+   calculation = 'relax'
+   restart_mode = 'from_scratch'
+    pseudo_dir = ./pseudos
+   outdir = ./
+   prefix = MOL_015
+   tprnfor = .TRUE.
+   !
+ /
+ &SYSTEM
+   !
+   ecutrho = 300
+   ecutwfc = 30
+   !
+   ibrav = 1
+   celldm( 1 ) = 22.497
+   !
+   nat = 14
+   ntyp = 3
+   !
+   !
+/
+ &ELECTRONS
+   !
+   conv_thr = 5.D-9
+   diagonalization = 'cg'
+   mig_beta = 0.4
+   electron_maxstep = 200
+   !
+ /
+ &IONS
+   !
+   ion_dynamics    = 'bfgs'
+   !
+ /
+K_POINTS (automatic)
+ 1 1 1 0 0 0
+ATOMIC_SPECIES  
+C   12      C.pbe-rrkjus.UPF
+H    1      H.pbe-rrkjus.UPF
+N   14      N.pbe-rrkjus.UPF
+ATOMIC_POSITIONS (angstrom)
+C       -0.100384704   1.140389803   0.293377928
+C        1.391395069   0.866914322   0.037219037
+C        2.039303773   2.268522194   0.103750295
+C       -0.304853215   2.487384798  -0.400941813
+H       -0.760601839   0.351610045  -0.094720354
+H       -0.292503599   1.252198946   1.373037156
+H        1.521246101   0.434201478  -0.968431047
+H        1.832620062   0.162226342   0.756578814
+H        2.554560865   2.427601107   1.068102067
+H        2.794916515   2.393794624  -0.693327696
+H       -1.207171555   3.017437991  -0.052814984
+H       -0.405422940   2.334239389  -1.498343894
+N        0.910750883   3.228740475  -0.020622840
+H        1.118195823   3.989392577  -0.667854330
