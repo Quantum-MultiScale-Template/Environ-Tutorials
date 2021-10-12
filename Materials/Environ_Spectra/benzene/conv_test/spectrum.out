@@ -1,0 +1,47 @@
+ Warning: Only a single CPU will be used!
+
+     Program TDDFPT_PP v.6.5 starts on  9Oct2021 at 11:59:17 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+
+     Reading   4000 Lanczos steps for direction 1
+       3000 steps will be considered
+
+
+     Polarization direction:1
+     Lanczos coefficients:
+     Average =    13.25720681
+     Average oscillation amplitude =     0.23031685
+
+     Data ready, starting to calculate observables...
+
+     Broadening =      0.00400000 Ry
+
+     Output file name: C6H6.plot_chi.dat   
+
+     Output file name for the oscillator strength S  C6H6.plot_S.dat     
+
+     chi_i_j: dipole polarizability tensor  in units of e^2*a_0^2/energy
+
+     Insufficent info for S
+
+     Functions are reported in \hbar.\omega  Energy unit is (Ry)
+
+     TDDFPT_PP    :      6.04s CPU      6.04s WALL
+
+
+   This run was terminated on:  11:59:23   9Oct2021            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

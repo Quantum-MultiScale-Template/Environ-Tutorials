@@ -1,0 +1,70 @@
+ Warning: Only a single CPU will be used!
+
+     Program TDDFPT_PP v.6.4.1 starts on 15Dec2019 at  2:28:51 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on    24 processors
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =      24
+
+     Reading   2000 Lanczos steps for direction 1
+       2000 steps will be considered
+
+
+     Reading   2000 Lanczos steps for direction 2
+       2000 steps will be considered
+
+
+     Reading   2000 Lanczos steps for direction 3
+       2000 steps will be considered
+
+
+     Polarization direction:1
+     Lanczos coefficients:
+     Average =    15.93283079
+     Average oscillation amplitude =     0.18766970
+
+     Polarization direction:2
+     Lanczos coefficients:
+     Average =    15.93278935
+     Average oscillation amplitude =     0.18764804
+
+     Polarization direction:3
+     Lanczos coefficients:
+     Average =    15.93263274
+     Average oscillation amplitude =     0.18355358
+
+     Data ready, starting to calculate observables...
+
+     Broadening =      0.00200000 Ry
+
+     Output file name: phenol.plot_chi.dat 
+
+     Output file name for the oscillator strength S  phenol.plot_S.dat   
+
+     chi_i_j: dipole polarizability tensor  in units of e^2*a_0^2/energy
+
+     S: oscillator strength in units of 1/energy
+
+     S(\hbar \omega) = 2m/( 3 \pi e^2 \hbar)  \omega sum_j chi_j_j
+
+     S(\hbar \omega) satisfies the f-sum rule:  \int_0^\infty dE S(E) = N_el 
+
+     Functions are reported in \hbar.\omega  Energy unit is (Ry)
+ 
+     TDDFPT_PP    :     19.84s CPU     20.31s WALL
+
+ 
+   This run was terminated on:   2:29:12  15Dec2019            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

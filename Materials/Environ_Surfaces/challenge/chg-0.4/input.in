@@ -1,0 +1,62 @@
+&control
+calculation = 'scf'
+prefix = 'layer'
+tprnfor = .true.,
+verbosity = "high"
+forc_conv_thr = 0.001,
+pseudo_dir = '/storage/scratch2/nk0320/2D_materials/SSSP_eff_PBE'
+outdir = './'
+wfcdir = './'
+nstep = 1
+/
+&system
+nspin = 1,
+ecutwfc = 45,
+nat = 14
+occupations = 'smearing'
+ibrav = 0,
+degauss = 0.02
+smearing = 'cold'
+tot_charge = -0.4
+ntyp = 3
+ecutrho = 360,
+input_dft = "vdw-df2-c09"
+/
+&electrons
+electron_maxstep = 200,
+conv_thr = 5e-09,
+mixing_mode = 'local-TF'
+mixing_beta = 0.7
+/
+&ions
+ion_dynamics = 'bfgs',
+/
+&cell
+cell_dynamics = 'bfgs',
+cell_dofree = '2Dxy'
+/
+ATOMIC_SPECIES
+Mo 95.94  Mo_ONCV_PBE-1.0.upf
+H 1.00794  H.pbe-rrkjus_psl.0.1.UPF
+S 32.065  S_pbe_v1.2.uspp.F.UPF
+ATOMIC_POSITIONS {crystal}
+Mo  0.1688  0.3361  0.4999   0 0 1 
+Mo  0.1727  0.8385  0.5   0 0 1 
+Mo  0.6664  0.332  0.5   0 0 1 
+Mo  0.6663  0.8385  0.5   0 0 1 
+H  0.4252  0.0817  0.6197   0 0 1 
+H  0.4248  0.082  0.3803   0 0 1 
+S  0.3464  0.1585  0.4301   0 0 1 
+S  0.3465  0.1585  0.57   0 0 1 
+S  0.3315  0.668  0.4325   0 0 1 
+S  0.3315  0.6678  0.5674   0 0 1 
+S  0.8369  0.1733  0.4325   0 0 1 
+S  0.837  0.1733  0.5675   0 0 1 
+S  0.8329  0.6718  0.4328   0 0 1 
+S  0.8329  0.6718  0.5672   0 0 1 
+CELL_PARAMETERS angstrom
+6.37013  0.0  0.0  
+-3.277531  5.462931  0.0  
+0.0  0.0  23.1547  
+K_POINTS {automatic}
+10 10 1 0 0 0

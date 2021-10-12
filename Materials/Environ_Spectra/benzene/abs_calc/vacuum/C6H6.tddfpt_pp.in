@@ -1,0 +1,12 @@
+ &lr_input
+   prefix = 'C6H6',
+   outdir = './tmp',
+   itermax0 = 500,
+   itermax  = 20000,
+   extrapolation = "osc",
+   epsil = 0.004,
+   start = 0.0d0,
+   end   = 1.0d0,
+   increment = 0.0001d0,
+   ipol = 1
+ /

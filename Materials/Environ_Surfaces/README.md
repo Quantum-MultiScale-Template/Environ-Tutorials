@@ -17,3 +17,8 @@ example06: pw.x
     Same as example05, but the electrolyte counter charge layer is
     modeled according to the linearized Poisson-Boltzmann model.
 
+challenge
+
+    Can you find a the number of electrons thave correspond to an 
+    applied potential of 3.5 eV 
+

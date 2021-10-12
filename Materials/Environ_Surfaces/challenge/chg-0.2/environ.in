@@ -1,0 +1,33 @@
+&ENVIRON
+verbose = 1,
+environ_restart = .false.,
+environ_type = 'input',
+env_static_permittivity = 78.3
+env_electrolyte_ntyp = 2
+cion(1) = 0.1
+cion(2) = 0.1
+zion(1) = 1
+zion(2) = -1
+system_axis = 3,
+system_dim = 2
+temperature = 300,
+/
+&BOUNDARY
+electrolyte_mode = "system"
+electrolyte_distance = 12.5
+electrolyte_spread = 0.5
+solvent_mode = "full"
+rhomin = 0.0013
+rhomax = 0.01025
+filling_threshold = 0.70
+/
+&ELECTROSTATIC
+problem = "generalized"
+solver = "iterative"
+auxiliary = "full"
+tol = 1e-14,
+maxstep = 500,
+pbc_correction = "gcs"
+pbc_dim = 2,
+pbc_axis = 3,
+/

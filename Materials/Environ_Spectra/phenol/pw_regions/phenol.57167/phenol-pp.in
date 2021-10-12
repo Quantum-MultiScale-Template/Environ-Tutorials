@@ -1,0 +1,13 @@
+&lr_input
+  prefix='phenol',
+  outdir='./tmp',
+  itermax0 =  2000
+  itermax  = 10000
+  extrapolation="osc"  !extrapolation of an oscillatory function
+  epsil=0.002  ! broadening
+  start=0.02d0
+  end=0.6d0
+  increment=0.0001d0
+  ipol=4
+/
+

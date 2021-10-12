@@ -1,0 +1,10 @@
+ &lr_input
+   prefix = 'C6H6',
+   outdir = './tmp',
+   restart_step = 100,
+   restart = .false.
+ /
+ &lr_control
+   itermax = 4000,
+   ipol = 1
+ /

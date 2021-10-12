@@ -1,0 +1,11 @@
+&lr_input
+    prefix="phenol",
+    outdir='./tmp',
+    restart_step=1,
+    restart=.falses.
+/
+&lr_control
+    itermax=2000,
+    ipol=4
+/
+

@@ -1,0 +1,9 @@
+For this exercise you will investigate how many lanczos iterations we need before reaching convergence of the absoprtion spectra of benzene on vacuum.
+
+You have the results of a turbo_lanczos calculation that was set to run with 4000 lanczos steps. 
+
+On your tmp folder are only the necessary files for the next steps we will perform.
+
+Your next steps will require you to modify your post-processing file to generate new *.plot_chi.dat files that will use increasing number of lanczos steps (ex: 500, 1000, 1500, 2000, ...,4000). You want to keep the extrapollation as is for this step, and ipol should match the turbo_lanczos input file.
+
+You can plot your results as is (in Ry units) or you can choose to convert units to eV or nm, which are most commonly used when comparing results to experimental data.

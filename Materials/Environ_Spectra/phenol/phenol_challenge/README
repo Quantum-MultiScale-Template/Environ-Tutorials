@@ -1,0 +1,7 @@
+Using the data provided in the presentation (convergence of calculations), you will create input files for a calculation in vacuum and in solution using environ for phenol.
+
+You will be provided a phenol.scf.in file with coordinates, and you will change parameters as you see fit.
+
+You can also play around with parameters on your post-processing file such as start, end and increment. Remember that for experimental purposes, the range of interest in the absorption spectrum of phenol is between ~240-300 nm. ** Units in QE are Ry **
+
+
