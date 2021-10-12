@@ -10,15 +10,14 @@ if test "`echo -e`" = "-e" ; then ECHO=echo ; else ECHO="echo -e" ; fi
 $ECHO
 $ECHO "$EXAMPLE_DIR : starting"
 $ECHO
-$ECHO "This example shows how to use pw.x to calculate the solvation energy "
+$ECHO "This example shows how to use pw.x to calculate the solvation energy"
 $ECHO "and other solvent related quantites for a water molecule in water"
 $ECHO "using a fully self consistent dielectric defined on the electronic"
-$ECHO "density according to "
+$ECHO "density according to"
 $ECHO
 $ECHO "   O. Andreussi, I. Dabo and N. Marzari, J. Chem. Phys. 136, 064102 (2012) "
 $ECHO
-$ECHO "Two equivalent calculations are performed, using two different "
-$ECHO "algorithms to obtain the self consistent dielectic as described in "
+$ECHO "A preconditioned conjugate gradient algorithm is used, as described in"
 $ECHO
 $ECHO "G. Fisicaro, L. Genovese, O. Andreussi, N. Marzari and S. Goedecker,"
 $ECHO "               J. Chem. Phys. 144, 014103 (2016)"
@@ -171,12 +170,6 @@ for environ_type in vacuum water ; do
 
   for solver in $solvers ; do
 
-    if [ $solver = "fixed-point" ]; then
-      auxiliary='full'
-    else
-      auxiliary='none'
-    fi
-
     # clean TMP_DIR
     $ECHO "  cleaning $TMP_DIR...\c"
     rm -rf $TMP_DIR/*
@@ -226,9 +219,9 @@ ATOMIC_SPECIES
  H   1  H.pbe-rrkjus.UPF
  O  16  O.pbe-rrkjus.UPF
 ATOMIC_POSITIONS (bohr)
-O   11.79  12.05  11.50
-H   13.45  11.22  11.50
-H   10.56  10.66  11.50
+O            11.7911727543       12.0437503936       11.5000000063
+H            13.4430308917       11.2218874774       11.4999999997
+H            10.5657963540       10.6643621290       11.4999999940
 EOF
   cat > environ_${environ_type}_${solver}.in << EOF
  &ENVIRON
