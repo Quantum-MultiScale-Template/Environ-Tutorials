@@ -1,5 +1,19 @@
 # Environ Examples
 
+### **Questions**
+
+- How can run Environ simulations for isolated systems?
+- How can I compute solvation free energies?
+---
+### **Objectives**
+
+- Turn on the simulation software
+- Setup an initial configuration
+- Set environment details
+- Perform geometry optimizations with and without the environment
+- Familiarize with numerical parameters
+---
+
     Example QE+Environ runs
 
 example01: pw.x
