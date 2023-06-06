@@ -1,0 +1,1452 @@
+
+     Program PWSCF v.7.1 starts on  5Jun2023 at 13:45:14 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     4 processors
+
+     MPI processes distributed on     1 nodes
+     0 MiB available memory on the printing compute node when the environment starts
+ 
+     Reading input from espresso.pwi
+Warning: card &CELL ignored
+Warning: card / ignored
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+ 
+     Reading input from environ.in:
+     * setting up water environment
+     * using electronic solvent mode
+     * setting boundary derivatives method to SCCS default
+     * ignoring &ELECTROSTATIC namelist
+     
+     file O.pbe-rrkjus.UPF: wavefunction(s)  2S renormalized
+     file H.pbe-rrkjus.UPF: wavefunction(s)  1S renormalized
+     Message from routine setup:
+     using ibrav=0 with symmetry is DISCOURAGED, use correct ibrav instead
+ 
+     R & G space division:  proc/nbgrp/npool/nimage =       4
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min        8526    3409    848              1184522   299621   37444
+     Max        8528    3410    850              1184524   299624   37446
+     Sum       34109   13637   3397              4738093  1198487  149781
+ 
+     Using Slab Decomposition
+ 
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      37.7945  a.u.
+     unit-cell volume          =   53986.6760 (a.u.)^3
+     number of atoms/cell      =            3
+     number of atomic types    =            2
+     number of electrons       =         8.00
+     number of Kohn-Sham states=            4
+     kinetic-energy cutoff     =      30.0000  Ry
+     charge density cutoff     =     300.0000  Ry
+     scf convergence threshold =      1.0E-08
+     mixing beta               =       0.4000
+     number of iterations used =            8  plain     mixing
+     energy convergence thresh.=      1.0E-04
+     force convergence thresh. =      1.0E-03
+     Exchange-correlation= SLA  PW   PBE  PBE
+                           (   1   4   3   4   0   0   0)
+     nstep                     =           50
+
+
+     ================================================================================
+ 
+                                  Environ Setup Summary
+
+     ================================================================================
+ 
+     Please cite
+
+          O. Andreussi, I. Dabo and N. Marzari, J. Chem. Phys. 136, 064102 (2012)
+
+     in publications or presentations arising from this work.
+
+     ================================================================================
+ 
+     Parameters
+     ==========
+
+     compensation onset threshold      =               0.1000E+00
+     static permittivity               =                    78.30
+     surface tension in input (dyn/cm) =                    47.90
+     surface tension in internal units =               0.6153E-04
+     external pressure in input (GPa)  =                    -0.36
+     external pressure in inter. units =              -0.2447E-04
+
+     Solvent Boundary
+     ================
+
+     solvent mode                      =               electronic
+     derivatives method                =                    chain
+     numerical core for derivatives    =                      fft
+     switching function adopted        =                     SCCS
+     density limit for vacuum region   =               0.5000E-02
+     density limit for bulk solvent    =               0.1000E-03
+
+     Electrostatic Setup
+     ===================
+
+     electrostatic problem to solve    =              generalized
+     numerical solver adopted          =                       cg
+     type of auxiliary density adopted =                     none
+     numerical core for poisson        =                      fft
+
+     ================================================================================
+ 
+
+     celldm(1)=  37.794522  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.000000   1.000000   0.000000 )  
+               a(3) = (   0.000000   0.000000   1.000000 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.000000  0.000000 )  
+               b(2) = (  0.000000  1.000000  0.000000 )  
+               b(3) = (  0.000000  0.000000  1.000000 )  
+
+
+     PseudoPot. # 1 for O  read from file:
+     ../pseudos/O.pbe-rrkjus.UPF
+     MD5 check sum: fadcf19ee70a498d3030e2e79cf929a4
+     Pseudo is Ultrasoft, Zval =  6.0
+     Generated by new atomic code, or converted to UPF format
+     Using radial grid of 1269 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for H  read from file:
+     ../pseudos/H.pbe-rrkjus.UPF
+     MD5 check sum: 2d52a7f45632fd764c17cc6affed14c8
+     Pseudo is Ultrasoft, Zval =  1.0
+     Generated by new atomic code, or converted to UPF format
+     Using radial grid of 1061 points,  2 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+        O              6.00    15.99900     O ( 1.00)
+        H              1.00     1.00800     H ( 1.00)
+
+      4 Sym. Ops. (no inversion) found
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           O   tau(   1) = (   0.5000000   0.5000000   0.5149077  )
+         2           H   tau(   2) = (   0.5000000   0.5381620   0.4850923  )
+         3           H   tau(   3) = (   0.5000000   0.4618380   0.4850923  )
+
+     number of k points=     1
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   2.0000000
+
+     Dense  grid:  4738093 G-vectors     FFT dimensions: ( 216, 216, 216)
+
+     Smooth grid:  1198487 G-vectors     FFT dimensions: ( 135, 135, 135)
+
+     Estimated max dynamical RAM per process >       1.57 GB
+
+     Estimated total dynamical RAM >       6.28 GB
+
+     Initial potential from superposition of free atoms
+
+     starting charge       7.8076, renormalised to       8.0000
+
+     negative rho (up, down):  2.238E-03 0.000E+00
+     Starting wfcs are    6 randomized atomic wfcs
+
+     total cpu time spent up to now is       26.0 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.00E-02,  avg # of iterations =  2.0
+
+     negative rho (up, down):  1.418E-03 0.000E+00
+
+     total cpu time spent up to now is       48.9 secs
+
+     total energy              =     -34.21631544 Ry
+     estimated scf accuracy    <       0.69652126 Ry
+     electrostatic embedding   =       0.00000000 Ry
+     cavitation energy         =       0.01729354 Ry
+     PV energy                 =      -0.01173417 Ry
+     correction to one-el term =       0.00000000 Ry
+
+     iteration #  2     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  8.71E-03,  avg # of iterations =  2.0
+
+     negative rho (up, down):  1.358E-03 0.000E+00
+
+     total cpu time spent up to now is       62.4 secs
+
+     total energy              =     -34.27254505 Ry
+     estimated scf accuracy    <       0.10063408 Ry
+     electrostatic embedding   =       0.00000000 Ry
+     cavitation energy         =       0.01315791 Ry
+     PV energy                 =      -0.00748441 Ry
+     correction to one-el term =       0.00000000 Ry
+
+     iteration #  3     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.26E-03,  avg # of iterations =  1.0
+
+     negative rho (up, down):  7.148E-03 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is       86.2 secs
+
+     total energy              =     -34.25988017 Ry
+     estimated scf accuracy    <       0.02833307 Ry
+     electrostatic embedding   =       0.00000000 Ry
+     cavitation energy         =       0.01166587 Ry
+     PV energy                 =      -0.00608813 Ry
+     correction to one-el term =       0.00000000 Ry
+
+     iteration #  4     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  3.54E-04,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.052E-03 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      113.3 secs
+
+     total energy              =     -34.29181737 Ry
+     estimated scf accuracy    <       0.00813440 Ry
+     electrostatic embedding   =      -0.01971256 Ry
+     cavitation energy         =       0.01105418 Ry
+     PV energy                 =      -0.00556705 Ry
+     correction to one-el term =      -0.09991463 Ry
+
+     iteration #  5     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.02E-04,  avg # of iterations =  1.0
+
+     negative rho (up, down):  1.350E-02 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      144.4 secs
+
+     total energy              =     -34.28966181 Ry
+     estimated scf accuracy    <       0.01307575 Ry
+     electrostatic embedding   =      -0.01883443 Ry
+     cavitation energy         =       0.01105944 Ry
+     PV energy                 =      -0.00557041 Ry
+     correction to one-el term =      -0.09966907 Ry
+
+     iteration #  6     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.02E-04,  avg # of iterations =  1.0
+
+     negative rho (up, down):  1.015E-02 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      177.2 secs
+
+     total energy              =     -34.28870265 Ry
+     estimated scf accuracy    <       0.01107897 Ry
+     electrostatic embedding   =      -0.02509237 Ry
+     cavitation energy         =       0.01111948 Ry
+     PV energy                 =      -0.00561609 Ry
+     correction to one-el term =      -0.05129313 Ry
+
+     iteration #  7     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.02E-04,  avg # of iterations =  1.0
+
+     negative rho (up, down):  1.047E-02 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      207.5 secs
+
+     total energy              =     -34.29047792 Ry
+     estimated scf accuracy    <       0.00283687 Ry
+     electrostatic embedding   =      -0.02733628 Ry
+     cavitation energy         =       0.01107197 Ry
+     PV energy                 =      -0.00558250 Ry
+     correction to one-el term =      -0.06011634 Ry
+
+     iteration #  8     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  3.55E-05,  avg # of iterations =  1.0
+
+     negative rho (up, down):  7.786E-03 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      237.7 secs
+
+     total energy              =     -34.28842452 Ry
+     estimated scf accuracy    <       0.00419008 Ry
+     electrostatic embedding   =      -0.02495062 Ry
+     cavitation energy         =       0.01105511 Ry
+     PV energy                 =      -0.00556558 Ry
+     correction to one-el term =      -0.05086056 Ry
+
+     iteration #  9     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  3.55E-05,  avg # of iterations =  1.0
+
+     negative rho (up, down):  6.332E-03 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      271.6 secs
+
+     total energy              =     -34.28944000 Ry
+     estimated scf accuracy    <       0.00081676 Ry
+     electrostatic embedding   =      -0.03023296 Ry
+     cavitation energy         =       0.01104664 Ry
+     PV energy                 =      -0.00556735 Ry
+     correction to one-el term =      -0.06185312 Ry
+
+     iteration # 10     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.02E-05,  avg # of iterations =  1.0
+
+     negative rho (up, down):  5.093E-03 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      296.8 secs
+
+     total energy              =     -34.28947922 Ry
+     estimated scf accuracy    <       0.00042602 Ry
+     electrostatic embedding   =      -0.03111332 Ry
+     cavitation energy         =       0.01104735 Ry
+     PV energy                 =      -0.00556933 Ry
+     correction to one-el term =      -0.06459099 Ry
+
+     iteration # 11     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  5.33E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  4.317E-03 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      324.8 secs
+
+     total energy              =     -34.28951706 Ry
+     estimated scf accuracy    <       0.00020905 Ry
+     electrostatic embedding   =      -0.03220494 Ry
+     cavitation energy         =       0.01105309 Ry
+     PV energy                 =      -0.00557515 Ry
+     correction to one-el term =      -0.06807880 Ry
+
+     iteration # 12     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  2.61E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  5.739E-03 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      353.5 secs
+
+     total energy              =     -34.28954382 Ry
+     estimated scf accuracy    <       0.00008563 Ry
+     electrostatic embedding   =      -0.03305991 Ry
+     cavitation energy         =       0.01105261 Ry
+     PV energy                 =      -0.00557573 Ry
+     correction to one-el term =      -0.06938159 Ry
+
+     iteration # 13     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.07E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  8.734E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      384.9 secs
+
+     total energy              =     -34.28951364 Ry
+     estimated scf accuracy    <       0.00012915 Ry
+     electrostatic embedding   =      -0.03271928 Ry
+     cavitation energy         =       0.01099918 Ry
+     PV energy                 =      -0.00553346 Ry
+     correction to one-el term =      -0.06324404 Ry
+
+     iteration # 14     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.07E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  8.001E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      416.1 secs
+
+     total energy              =     -34.28955708 Ry
+     estimated scf accuracy    <       0.00003941 Ry
+     electrostatic embedding   =      -0.03326611 Ry
+     cavitation energy         =       0.01110296 Ry
+     PV energy                 =      -0.00561612 Ry
+     correction to one-el term =      -0.07963239 Ry
+
+     iteration # 15     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  4.93E-07,  avg # of iterations =  1.0
+
+     negative rho (up, down):  7.557E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      441.8 secs
+
+     total energy              =     -34.28955497 Ry
+     estimated scf accuracy    <       0.00002286 Ry
+     electrostatic embedding   =      -0.03353824 Ry
+     cavitation energy         =       0.01109420 Ry
+     PV energy                 =      -0.00560993 Ry
+     correction to one-el term =      -0.07972293 Ry
+
+     iteration # 16     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  2.86E-07,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.426E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      472.5 secs
+
+     total energy              =     -34.28957209 Ry
+     estimated scf accuracy    <       0.00000067 Ry
+     electrostatic embedding   =      -0.03411656 Ry
+     cavitation energy         =       0.01107782 Ry
+     PV energy                 =      -0.00559835 Ry
+     correction to one-el term =      -0.08015807 Ry
+
+     iteration # 17     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  8.41E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  8.538E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      507.4 secs
+
+     total energy              =     -34.28957604 Ry
+     estimated scf accuracy    <       0.00000096 Ry
+     electrostatic embedding   =      -0.03405339 Ry
+     cavitation energy         =       0.01107931 Ry
+     PV energy                 =      -0.00559946 Ry
+     correction to one-el term =      -0.08018085 Ry
+
+     iteration # 18     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  8.41E-09,  avg # of iterations =  3.0
+
+     negative rho (up, down):  7.251E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      536.3 secs
+
+     total energy              =     -34.28955135 Ry
+     estimated scf accuracy    <       0.00002297 Ry
+     electrostatic embedding   =      -0.03348596 Ry
+     cavitation energy         =       0.01109484 Ry
+     PV energy                 =      -0.00561043 Ry
+     correction to one-el term =      -0.07959217 Ry
+
+     iteration # 19     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  8.41E-09,  avg # of iterations =  4.0
+
+     negative rho (up, down):  7.204E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      565.5 secs
+
+     total energy              =     -34.28957638 Ry
+     estimated scf accuracy    <       0.00000543 Ry
+     electrostatic embedding   =      -0.03450293 Ry
+     cavitation energy         =       0.01107100 Ry
+     PV energy                 =      -0.00559402 Ry
+     correction to one-el term =      -0.08146019 Ry
+
+     iteration # 20     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  8.41E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.289E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      591.8 secs
+
+     total energy              =     -34.28957610 Ry
+     estimated scf accuracy    <       0.00000126 Ry
+     electrostatic embedding   =      -0.03441725 Ry
+     cavitation energy         =       0.01107243 Ry
+     PV energy                 =      -0.00559513 Ry
+     correction to one-el term =      -0.08146858 Ry
+
+     iteration # 21     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  8.41E-09,  avg # of iterations =  3.0
+
+     negative rho (up, down):  7.308E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      618.4 secs
+
+     total energy              =     -34.28957703 Ry
+     estimated scf accuracy    <       0.00000353 Ry
+     electrostatic embedding   =      -0.03433898 Ry
+     cavitation energy         =       0.01107671 Ry
+     PV energy                 =      -0.00559872 Ry
+     correction to one-el term =      -0.08219708 Ry
+
+     iteration # 22     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  8.41E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.318E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      645.5 secs
+
+     total energy              =     -34.28957748 Ry
+     estimated scf accuracy    <       0.00000026 Ry
+     electrostatic embedding   =      -0.03445665 Ry
+     cavitation energy         =       0.01107406 Ry
+     PV energy                 =      -0.00559675 Ry
+     correction to one-el term =      -0.08216604 Ry
+
+     iteration # 23     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  3.26E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.316E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      677.0 secs
+
+     total energy              =     -34.28957752 Ry
+     estimated scf accuracy    <       0.00000001 Ry
+     electrostatic embedding   =      -0.03449122 Ry
+     cavitation energy         =       0.01107395 Ry
+     PV energy                 =      -0.00559665 Ry
+     correction to one-el term =      -0.08209577 Ry
+
+     iteration # 24     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.45E-10,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.327E-04 0.000E+00
+
+     the potential shift due to the Gaussian-smeared nuclei is    -0.0032 ev
+
+     total cpu time spent up to now is      690.9 secs
+
+     End of self-consistent calculation
+
+          k = 0.0000 0.0000 0.0000 (149781 PWs)   bands (ev):
+
+   -24.8548 -12.5398  -8.9621  -6.9592
+
+     highest occupied level (ev):    -6.9592
+
+!    total energy              =     -34.28957749 Ry
+     estimated scf accuracy    <          1.9E-09 Ry
+
+     The total energy is the sum of the following terms:
+     one-electron contribution =     -72.60107546 Ry
+     hartree contribution      =      37.84708669 Ry
+     xc contribution           =      -8.42945439 Ry
+     ewald contribution        =       9.00495571 Ry
+     electrostatic embedding   =      -0.03448344 Ry
+     cavitation energy         =       0.01107417 Ry
+     PV energy                 =      -0.00559681 Ry
+     correction to one-el term =      -0.08208395 Ry
+
+     convergence has been achieved in  24 iterations
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  1   force =     0.00000000    0.00000000    0.01466846
+     atom    2 type  2   force =     0.00000000    0.01493425   -0.00733423
+     atom    3 type  2   force =     0.00000000   -0.01493425   -0.00733423
+
+     Total force =     0.027727     Total SCF correction =     0.000046
+
+
+     Computing stress (Cartesian axis) and pressure
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=       -0.01
+  -0.00000164   0.00000000   0.00000000           -0.24        0.00        0.00
+   0.00000000   0.00000189   0.00000000            0.00        0.28        0.00
+   0.00000000   0.00000000  -0.00000040            0.00        0.00       -0.06
+
+
+     BFGS Geometry Optimization
+     Energy error            =      0.0E+00 Ry
+     Gradient error          =      1.5E-02 Ry/Bohr
+
+     number of scf cycles    =   1
+     number of bfgs steps    =   0
+
+     energy             new  =     -34.2895774950 Ry
+
+     new trust radius        =       0.0166379866 bohr
+     new conv_thr            =       0.0000000100 Ry
+
+
+ATOMIC_POSITIONS (angstrom)
+O            10.0000000000       10.0000000000       10.3059167130
+H            10.0000000000       10.7711418625        9.6979643935
+H            10.0000000000        9.2288581375        9.6979643935
+
+
+
+     Writing config-only to output data dir ./H2O_water.save/
+     NEW-OLD atomic charge density approx. for the potential
+
+     negative rho (up, down):  1.086E-03 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      735.2 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.00E-06,  avg # of iterations =  3.0
+
+     negative rho (up, down):  8.888E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      770.4 secs
+
+     total energy              =     -34.28955597 Ry
+     estimated scf accuracy    <       0.00062423 Ry
+     electrostatic embedding   =      -0.03491825 Ry
+     cavitation energy         =       0.01110671 Ry
+     PV energy                 =      -0.00561912 Ry
+     correction to one-el term =      -0.07768891 Ry
+
+     iteration #  2     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  7.80E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.907E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      819.7 secs
+
+     total energy              =     -34.28967879 Ry
+     estimated scf accuracy    <       0.00002647 Ry
+     electrostatic embedding   =      -0.03470660 Ry
+     cavitation energy         =       0.01114020 Ry
+     PV energy                 =      -0.00564527 Ry
+     correction to one-el term =      -0.07841990 Ry
+
+     iteration #  3     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  3.31E-07,  avg # of iterations =  1.0
+
+     negative rho (up, down):  7.805E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      868.4 secs
+
+     total energy              =     -34.28967841 Ry
+     estimated scf accuracy    <       0.00000791 Ry
+     electrostatic embedding   =      -0.03480687 Ry
+     cavitation energy         =       0.01113622 Ry
+     PV energy                 =      -0.00564244 Ry
+     correction to one-el term =      -0.07777015 Ry
+
+     iteration #  4     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  9.88E-08,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.397E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      910.4 secs
+
+     total energy              =     -34.28968024 Ry
+     estimated scf accuracy    <       0.00000163 Ry
+     electrostatic embedding   =      -0.03492486 Ry
+     cavitation energy         =       0.01112974 Ry
+     PV energy                 =      -0.00563777 Ry
+     correction to one-el term =      -0.07693397 Ry
+
+     iteration #  5     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  2.04E-08,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.420E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is      947.6 secs
+
+     total energy              =     -34.28968082 Ry
+     estimated scf accuracy    <       0.00000032 Ry
+     electrostatic embedding   =      -0.03487309 Ry
+     cavitation energy         =       0.01113134 Ry
+     PV energy                 =      -0.00563904 Ry
+     correction to one-el term =      -0.07700867 Ry
+
+     iteration #  6     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  3.99E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.289E-04 0.000E+00
+
+     the potential shift due to the Gaussian-smeared nuclei is    -0.0032 ev
+
+     total cpu time spent up to now is      964.2 secs
+
+     End of self-consistent calculation
+
+          k = 0.0000 0.0000 0.0000 (149781 PWs)   bands (ev):
+
+   -24.7146 -12.3896  -8.9586  -6.9305
+
+     highest occupied level (ev):    -6.9305
+
+!    total energy              =     -34.28968091 Ry
+     estimated scf accuracy    <          2.2E-09 Ry
+
+     The total energy is the sum of the following terms:
+     one-electron contribution =     -72.30354973 Ry
+     hartree contribution      =      37.70664130 Ry
+     xc contribution           =      -8.40548995 Ry
+     ewald contribution        =       8.81894652 Ry
+     electrostatic embedding   =      -0.03487459 Ry
+     cavitation energy         =       0.01112937 Ry
+     PV energy                 =      -0.00563761 Ry
+     correction to one-el term =      -0.07684622 Ry
+
+     convergence has been achieved in   6 iterations
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  1   force =     0.00000000    0.00000000   -0.01649559
+     atom    2 type  2   force =     0.00000000   -0.00547742    0.00824779
+     atom    3 type  2   force =     0.00000000    0.00547742    0.00824779
+
+     Total force =     0.021637     Total SCF correction =     0.000147
+
+
+     Computing stress (Cartesian axis) and pressure
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=       -0.09
+  -0.00000164   0.00000000   0.00000000           -0.24        0.00        0.00
+   0.00000000   0.00000080   0.00000000            0.00        0.12        0.00
+   0.00000000   0.00000000  -0.00000105            0.00        0.00       -0.15
+
+     Energy error            =      1.0E-04 Ry
+     Gradient error          =      1.6E-02 Ry/Bohr
+
+     number of scf cycles    =   2
+     number of bfgs steps    =   1
+
+     energy             old  =     -34.2895774950 Ry
+     energy             new  =     -34.2896809103 Ry
+
+     CASE: energy            _new < energy            _old
+
+     new trust radius        =       0.0090675981 bohr
+     new conv_thr            =       0.0000000001 Ry
+
+
+ATOMIC_POSITIONS (angstrom)
+O            10.0000000000       10.0000000000       10.3011183468
+H            10.0000000000       10.7698109257        9.7003635766
+H            10.0000000000        9.2301890743        9.7003635766
+
+
+
+     Writing config-only to output data dir ./H2O_water.save/
+     NEW-OLD atomic charge density approx. for the potential
+
+     negative rho (up, down):  9.416E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1006.0 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.00E-06,  avg # of iterations =  3.0
+
+     negative rho (up, down):  8.384E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1039.5 secs
+
+     total energy              =     -34.28980585 Ry
+     estimated scf accuracy    <       0.00009830 Ry
+     electrostatic embedding   =      -0.03470508 Ry
+     cavitation energy         =       0.01111861 Ry
+     PV energy                 =      -0.00563022 Ry
+     correction to one-el term =      -0.07865545 Ry
+
+     iteration #  2     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.23E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.866E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1078.5 secs
+
+     total energy              =     -34.28982635 Ry
+     estimated scf accuracy    <       0.00000450 Ry
+     electrostatic embedding   =      -0.03478542 Ry
+     cavitation energy         =       0.01110487 Ry
+     PV energy                 =      -0.00561959 Ry
+     correction to one-el term =      -0.07843712 Ry
+
+     iteration #  3     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  5.62E-08,  avg # of iterations =  1.0
+
+     negative rho (up, down):  7.553E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1108.0 secs
+
+     total energy              =     -34.28982601 Ry
+     estimated scf accuracy    <       0.00000143 Ry
+     electrostatic embedding   =      -0.03473602 Ry
+     cavitation energy         =       0.01110610 Ry
+     PV energy                 =      -0.00562049 Ry
+     correction to one-el term =      -0.07871618 Ry
+
+     iteration #  4     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.78E-08,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.403E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1135.4 secs
+
+     total energy              =     -34.28982605 Ry
+     estimated scf accuracy    <       0.00000034 Ry
+     electrostatic embedding   =      -0.03467613 Ry
+     cavitation energy         =       0.01110829 Ry
+     PV energy                 =      -0.00562211 Ry
+     correction to one-el term =      -0.07910386 Ry
+
+     iteration #  5     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  4.27E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.350E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1174.2 secs
+
+     total energy              =     -34.28982613 Ry
+     estimated scf accuracy    <       0.00000003 Ry
+     electrostatic embedding   =      -0.03469833 Ry
+     cavitation energy         =       0.01110756 Ry
+     PV energy                 =      -0.00562154 Ry
+     correction to one-el term =      -0.07907790 Ry
+
+     iteration #  6     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  3.33E-10,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.322E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1212.6 secs
+
+     total energy              =     -34.28982605 Ry
+     estimated scf accuracy    <          1.1E-09 Ry
+     electrostatic embedding   =      -0.03470125 Ry
+     cavitation energy         =       0.01110823 Ry
+     PV energy                 =      -0.00562204 Ry
+     correction to one-el term =      -0.07915778 Ry
+
+     iteration #  7     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.37E-11,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.311E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1245.0 secs
+
+     total energy              =     -34.28982606 Ry
+     estimated scf accuracy    <          1.7E-10 Ry
+     electrostatic embedding   =      -0.03470299 Ry
+     cavitation energy         =       0.01110817 Ry
+     PV energy                 =      -0.00562200 Ry
+     correction to one-el term =      -0.07916421 Ry
+
+     iteration #  8     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  2.16E-12,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.304E-04 0.000E+00
+
+     the potential shift due to the Gaussian-smeared nuclei is    -0.0032 ev
+
+     total cpu time spent up to now is     1262.4 secs
+
+     End of self-consistent calculation
+
+          k = 0.0000 0.0000 0.0000 (149781 PWs)   bands (ev):
+
+   -24.7647 -12.4671  -8.9428  -6.9404
+
+     highest occupied level (ev):    -6.9404
+
+!    total energy              =     -34.28982605 Ry
+     estimated scf accuracy    <          4.9E-11 Ry
+
+     The total energy is the sum of the following terms:
+     one-electron contribution =     -72.42240151 Ry
+     hartree contribution      =      37.76330570 Ry
+     xc contribution           =      -8.41514174 Ry
+     ewald contribution        =       8.89280124 Ry
+     electrostatic embedding   =      -0.03470390 Ry
+     cavitation energy         =       0.01110818 Ry
+     PV energy                 =      -0.00562200 Ry
+     correction to one-el term =      -0.07917201 Ry
+
+     convergence has been achieved in   8 iterations
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  1   force =     0.00000000    0.00000000   -0.00304332
+     atom    2 type  2   force =     0.00000000    0.00172875    0.00152166
+     atom    3 type  2   force =     0.00000000   -0.00172875    0.00152166
+
+     Total force =     0.004458     Total SCF correction =     0.000003
+
+
+     Computing stress (Cartesian axis) and pressure
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=       -0.06
+  -0.00000164   0.00000000   0.00000000           -0.24        0.00        0.00
+   0.00000000   0.00000119   0.00000000            0.00        0.18        0.00
+   0.00000000   0.00000000  -0.00000078            0.00        0.00       -0.11
+
+     Energy error            =      1.5E-04 Ry
+     Gradient error          =      3.0E-03 Ry/Bohr
+
+     number of scf cycles    =   3
+     number of bfgs steps    =   2
+
+     energy             old  =     -34.2896809103 Ry
+     energy             new  =     -34.2898260495 Ry
+
+     CASE: energy            _new < energy            _old
+
+     new trust radius        =       0.0033786257 bohr
+     new conv_thr            =       0.0000000001 Ry
+
+
+ATOMIC_POSITIONS (angstrom)
+O            10.0000000000       10.0000000000       10.2993304550
+H            10.0000000000       10.7711135630        9.7012575225
+H            10.0000000000        9.2288864370        9.7012575225
+
+
+
+     Writing config-only to output data dir ./H2O_water.save/
+     NEW-OLD atomic charge density approx. for the potential
+
+     negative rho (up, down):  7.702E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1314.3 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.00E-06,  avg # of iterations =  2.0
+
+     Threshold (ethr) on eigenvalues was too large:
+     Diagonalizing with lowered threshold
+
+     Davidson diagonalization with overlap
+     ethr =  2.11E-08,  avg # of iterations =  3.0
+
+     negative rho (up, down):  7.446E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1345.9 secs
+
+     total energy              =     -34.28984436 Ry
+     estimated scf accuracy    <       0.00000149 Ry
+     electrostatic embedding   =      -0.03468868 Ry
+     cavitation energy         =       0.01110881 Ry
+     PV energy                 =      -0.00562244 Ry
+     correction to one-el term =      -0.07939962 Ry
+
+     iteration #  2     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.86E-08,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.333E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1377.6 secs
+
+     total energy              =     -34.28984454 Ry
+     estimated scf accuracy    <       0.00000029 Ry
+     electrostatic embedding   =      -0.03468679 Ry
+     cavitation energy         =       0.01110710 Ry
+     PV energy                 =      -0.00562117 Ry
+     correction to one-el term =      -0.07940337 Ry
+
+     iteration #  3     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  3.62E-09,  avg # of iterations =  1.0
+
+     negative rho (up, down):  7.348E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1406.1 secs
+
+     total energy              =     -34.28984448 Ry
+     estimated scf accuracy    <       0.00000009 Ry
+     electrostatic embedding   =      -0.03467569 Ry
+     cavitation energy         =       0.01110700 Ry
+     PV energy                 =      -0.00562112 Ry
+     correction to one-el term =      -0.07945989 Ry
+
+     iteration #  4     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.07E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.318E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1434.5 secs
+
+     total energy              =     -34.28984442 Ry
+     estimated scf accuracy    <          5.5E-09 Ry
+     electrostatic embedding   =      -0.03466458 Ry
+     cavitation energy         =       0.01110689 Ry
+     PV energy                 =      -0.00562107 Ry
+     correction to one-el term =      -0.07953918 Ry
+
+     iteration #  5     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  6.90E-11,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.309E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1461.0 secs
+
+     total energy              =     -34.28984444 Ry
+     estimated scf accuracy    <          1.8E-09 Ry
+     electrostatic embedding   =      -0.03466724 Ry
+     cavitation energy         =       0.01110685 Ry
+     PV energy                 =      -0.00562104 Ry
+     correction to one-el term =      -0.07954285 Ry
+
+     iteration #  6     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  2.21E-11,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.308E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1491.1 secs
+
+     total energy              =     -34.28984442 Ry
+     estimated scf accuracy    <          8.2E-10 Ry
+     electrostatic embedding   =      -0.03467536 Ry
+     cavitation energy         =       0.01110683 Ry
+     PV energy                 =      -0.00562104 Ry
+     correction to one-el term =      -0.07956659 Ry
+
+     iteration #  7     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.03E-11,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.305E-04 0.000E+00
+
+     the potential shift due to the Gaussian-smeared nuclei is    -0.0032 ev
+
+     total cpu time spent up to now is     1509.7 secs
+
+     End of self-consistent calculation
+
+          k = 0.0000 0.0000 0.0000 (149781 PWs)   bands (ev):
+
+   -24.7651 -12.4886  -8.9277  -6.9402
+
+     highest occupied level (ev):    -6.9402
+
+!    total energy              =     -34.28984444 Ry
+     estimated scf accuracy    <          1.0E-10 Ry
+
+     The total energy is the sum of the following terms:
+     one-electron contribution =     -72.43416293 Ry
+     hartree contribution      =      37.76937151 Ry
+     xc contribution           =      -8.41617434 Ry
+     ewald contribution        =       8.89988342 Ry
+     electrostatic embedding   =      -0.03467492 Ry
+     cavitation energy         =       0.01110684 Ry
+     PV energy                 =      -0.00562105 Ry
+     correction to one-el term =      -0.07957297 Ry
+
+     convergence has been achieved in   7 iterations
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  1   force =     0.00000000    0.00000000   -0.00068594
+     atom    2 type  2   force =     0.00000000    0.00188476    0.00034297
+     atom    3 type  2   force =     0.00000000   -0.00188476    0.00034297
+
+     Total force =     0.002795     Total SCF correction =     0.000025
+
+
+     Computing stress (Cartesian axis) and pressure
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=       -0.06
+  -0.00000164   0.00000000   0.00000000           -0.24        0.00        0.00
+   0.00000000   0.00000121   0.00000000            0.00        0.18        0.00
+   0.00000000   0.00000000  -0.00000073            0.00        0.00       -0.11
+
+     Energy error            =      1.8E-05 Ry
+     Gradient error          =      1.9E-03 Ry/Bohr
+
+     number of scf cycles    =   4
+     number of bfgs steps    =   3
+
+     energy             old  =     -34.2898260495 Ry
+     energy             new  =     -34.2898444363 Ry
+
+     CASE: energy            _new < energy            _old
+
+     new trust radius        =       0.0037164883 bohr
+     new conv_thr            =            1.0E-10 Ry
+
+
+ATOMIC_POSITIONS (angstrom)
+O            10.0000000000       10.0000000000       10.2978338959
+H            10.0000000000       10.7729323295        9.7020058020
+H            10.0000000000        9.2270676705        9.7020058020
+
+
+
+     Writing config-only to output data dir ./H2O_water.save/
+     NEW-OLD atomic charge density approx. for the potential
+
+     negative rho (up, down):  7.743E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1556.8 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.00E-06,  avg # of iterations =  2.0
+
+     Threshold (ethr) on eigenvalues was too large:
+     Diagonalizing with lowered threshold
+
+     Davidson diagonalization with overlap
+     ethr =  9.49E-09,  avg # of iterations =  4.0
+
+     negative rho (up, down):  7.444E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1593.0 secs
+
+     total energy              =     -34.28985498 Ry
+     estimated scf accuracy    <       0.00000108 Ry
+     electrostatic embedding   =      -0.03468302 Ry
+     cavitation energy         =       0.01110926 Ry
+     PV energy                 =      -0.00562272 Ry
+     correction to one-el term =      -0.07958145 Ry
+
+     iteration #  2     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.35E-08,  avg # of iterations =  1.0
+
+     negative rho (up, down):  7.347E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1626.9 secs
+
+     total energy              =     -34.28985500 Ry
+     estimated scf accuracy    <       0.00000031 Ry
+     electrostatic embedding   =      -0.03466935 Ry
+     cavitation energy         =       0.01110925 Ry
+     PV energy                 =      -0.00562278 Ry
+     correction to one-el term =      -0.07962464 Ry
+
+     iteration #  3     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  3.92E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.333E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1654.0 secs
+
+     total energy              =     -34.28985492 Ry
+     estimated scf accuracy    <       0.00000002 Ry
+     electrostatic embedding   =      -0.03465840 Ry
+     cavitation energy         =       0.01110877 Ry
+     PV energy                 =      -0.00562249 Ry
+     correction to one-el term =      -0.07967648 Ry
+
+     iteration #  4     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  2.27E-10,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.318E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1688.4 secs
+
+     total energy              =     -34.28985490 Ry
+     estimated scf accuracy    <          2.1E-09 Ry
+     electrostatic embedding   =      -0.03466052 Ry
+     cavitation energy         =       0.01110842 Ry
+     PV energy                 =      -0.00562224 Ry
+     correction to one-el term =      -0.07969344 Ry
+
+     iteration #  5     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  2.66E-11,  avg # of iterations =  3.0
+
+     negative rho (up, down):  7.310E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1719.5 secs
+
+     total energy              =     -34.28985490 Ry
+     estimated scf accuracy    <          1.5E-09 Ry
+     electrostatic embedding   =      -0.03466275 Ry
+     cavitation energy         =       0.01110847 Ry
+     PV energy                 =      -0.00562229 Ry
+     correction to one-el term =      -0.07971467 Ry
+
+     iteration #  6     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  1.93E-11,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.306E-04 0.000E+00
+
+     add environment contribution to local potential
+
+     total cpu time spent up to now is     1748.6 secs
+
+     total energy              =     -34.28985490 Ry
+     estimated scf accuracy    <          2.9E-10 Ry
+     electrostatic embedding   =      -0.03466568 Ry
+     cavitation energy         =       0.01110842 Ry
+     PV energy                 =      -0.00562226 Ry
+     correction to one-el term =      -0.07972483 Ry
+
+     iteration #  7     ecut=    30.00 Ry     beta= 0.40
+     Davidson diagonalization with overlap
+     ethr =  3.62E-12,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.304E-04 0.000E+00
+
+     the potential shift due to the Gaussian-smeared nuclei is    -0.0032 ev
+
+     total cpu time spent up to now is     1764.0 secs
+
+     End of self-consistent calculation
+
+          k = 0.0000 0.0000 0.0000 (149781 PWs)   bands (ev):
+
+   -24.7579 -12.5033  -8.9114  -6.9384
+
+     highest occupied level (ev):    -6.9384
+
+!    total energy              =     -34.28985492 Ry
+     estimated scf accuracy    <          1.6E-11 Ry
+
+     The total energy is the sum of the following terms:
+     one-electron contribution =     -72.43066566 Ry
+     hartree contribution      =      37.76831291 Ry
+     xc contribution           =      -8.41598916 Ry
+     ewald contribution        =       8.89739672 Ry
+     electrostatic embedding   =      -0.03466707 Ry
+     cavitation energy         =       0.01110840 Ry
+     PV energy                 =      -0.00562225 Ry
+     correction to one-el term =      -0.07972881 Ry
+
+     convergence has been achieved in   7 iterations
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  1   force =     0.00000000    0.00000000    0.00017207
+     atom    2 type  2   force =     0.00000000    0.00095718   -0.00008603
+     atom    3 type  2   force =     0.00000000   -0.00095718   -0.00008603
+
+     Total force =     0.001370     Total SCF correction =     0.000005
+
+
+     Computing stress (Cartesian axis) and pressure
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=       -0.06
+  -0.00000165   0.00000000   0.00000000           -0.24        0.00        0.00
+   0.00000000   0.00000117   0.00000000            0.00        0.17        0.00
+   0.00000000   0.00000000  -0.00000073            0.00        0.00       -0.11
+
+     Energy error            =      1.0E-05 Ry
+     Gradient error          =      9.6E-04 Ry/Bohr
+
+     bfgs converged in   5 scf cycles and   4 bfgs steps
+     (criteria: energy <  1.0E-04 Ry, force <  1.0E-03 Ry/Bohr)
+
+     End of BFGS Geometry Optimization
+
+     Final energy             =     -34.2898549227 Ry
+
+     File ./H2O_water.bfgs deleted, as requested
+Begin final coordinates
+
+ATOMIC_POSITIONS (angstrom)
+O            10.0000000000       10.0000000000       10.2978338959
+H            10.0000000000       10.7729323295        9.7020058020
+H            10.0000000000        9.2270676705        9.7020058020
+End final coordinates
+
+
+
+     Writing all to output data dir ./H2O_water.save/
+ 
+     init_run     :     17.34s CPU     25.29s WALL (       1 calls)
+     electrons    :   1065.51s CPU   1554.68s WALL (       5 calls)
+     update_pot   :     11.21s CPU     14.37s WALL (       4 calls)
+     forces       :     14.58s CPU     25.05s WALL (       5 calls)
+     stress       :     36.63s CPU     58.24s WALL (       5 calls)
+
+     Called by init_run:
+     wfcinit      :      0.30s CPU      0.40s WALL (       1 calls)
+     potinit      :      7.80s CPU     10.76s WALL (       1 calls)
+     hinit0       :      1.82s CPU      2.51s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :     28.46s CPU     35.89s WALL (      54 calls)
+     sum_band     :    121.89s CPU    202.43s WALL (      54 calls)
+     v_of_rho     :    121.08s CPU    164.82s WALL (      57 calls)
+     newd         :     69.67s CPU    177.90s WALL (      57 calls)
+     mix_rho      :     28.50s CPU     44.24s WALL (      54 calls)
+
+     Called by c_bands:
+     init_us_2    :      0.73s CPU      1.42s WALL (     109 calls)
+     init_us_2:cp :      0.73s CPU      1.42s WALL (     109 calls)
+     cegterg      :     27.14s CPU     33.67s WALL (      54 calls)
+
+     Called by *egterg:
+     cdiaghg      :      0.02s CPU      0.05s WALL (     152 calls)
+     h_psi        :     24.40s CPU     29.94s WALL (     159 calls)
+     s_psi        :      0.37s CPU      0.44s WALL (     159 calls)
+     g_psi        :      0.10s CPU      0.11s WALL (     104 calls)
+
+     Called by h_psi:
+     h_psi:calbec :      0.44s CPU      0.55s WALL (     159 calls)
+     vloc_psi     :     23.40s CPU     28.58s WALL (     159 calls)
+     add_vuspsi   :      0.37s CPU      0.46s WALL (     159 calls)
+
+     General routines
+     calbec       :      0.68s CPU      0.86s WALL (     238 calls)
+     fft          :    111.23s CPU    140.79s WALL (     777 calls)
+     ffts         :      3.82s CPU      5.01s WALL (     111 calls)
+     fftw         :     23.24s CPU     28.79s WALL (    1404 calls)
+     interpolate  :     11.09s CPU     14.68s WALL (      57 calls)
+ 
+     Parallel routines
+ 
+     Environ routines
+ 
+     PWSCF        :  20m16.60s CPU  29m44.08s WALL
+
+ 
+   This run was terminated on:  14:14:58   5Jun2023            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

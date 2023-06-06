@@ -2,7 +2,7 @@
 
 ### **Questions**
 
-- How can run Environ simulations?
+- How can we run Environ simulations?
 ---
 ### **Objectives**
 
