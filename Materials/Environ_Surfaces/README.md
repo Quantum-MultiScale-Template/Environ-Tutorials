@@ -1,24 +1,16 @@
 # Environ Examples
 
-    Example QE+Environ runs
+### **Questions**
 
-example04: pw.x
+- How can run Environ simulations for slabs?
+- How can I model dipoles and charges on 2D systems?
+- How can I explore electrolyte models?
+---
+### **Objectives**
 
-    Use of parabolic correction for periodic boundary conditions in
-    neutral and charged 2D systems (slab).
-
-example05: pw.x
-
-    Use of external classical charge distribution (planar) to model
-    Helmholtz layer above a charged 2D system.
-
-example06: pw.x
-
-    Same as example05, but the electrolyte counter charge layer is
-    modeled according to the linearized Poisson-Boltzmann model.
-
-challenge
-
-    Can you find a the number of electrons thave correspond to an 
-    applied potential of 3.5 eV 
-
+- Setup a slab and adsorbate configuration
+- Set environment details
+- Verify classical electrostatics on 2D systems
+- Understand the effects of dielectric and electrolyte screening
+- Familiarize with numerical and physical parameters
+---
